@@ -12,6 +12,7 @@ namespace VidaLink.Controllers
         {
             ViewBag.Title = "Home Page";
 
+            //champs
             return View();
         }
     }
