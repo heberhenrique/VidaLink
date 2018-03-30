@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidaLink", "VidaLink\VidaLink.csproj", "{EEE6C878-078B-499A-AE64-C26C7D77D965}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidaLink.Application", "VidaLink\VidaLink.Application.csproj", "{EEE6C878-078B-499A-AE64-C26C7D77D965}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

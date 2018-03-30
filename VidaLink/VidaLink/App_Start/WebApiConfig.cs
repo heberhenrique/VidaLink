@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace VidaLink
+namespace VidaLink.Application
 {
     public static class WebApiConfig
     {

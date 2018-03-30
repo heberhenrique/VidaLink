@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using VidaLink.Areas.HelpPage.ModelDescriptions;
-using VidaLink.Areas.HelpPage.Models;
+using VidaLink.Application.Areas.HelpPage.ModelDescriptions;
+using VidaLink.Application.Areas.HelpPage.Models;
 
-namespace VidaLink.Areas.HelpPage
+namespace VidaLink.Application.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

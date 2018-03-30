@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using VidaLink.Areas.HelpPage.ModelDescriptions;
+using VidaLink.Application.Areas.HelpPage.ModelDescriptions;
 
-namespace VidaLink.Areas.HelpPage
+namespace VidaLink.Application.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

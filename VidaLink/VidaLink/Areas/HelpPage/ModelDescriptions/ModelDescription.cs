@@ -1,6 +1,6 @@
 using System;
 
-namespace VidaLink.Areas.HelpPage.ModelDescriptions
+namespace VidaLink.Application.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

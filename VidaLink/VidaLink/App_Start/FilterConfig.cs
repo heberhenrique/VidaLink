@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace VidaLink
+namespace VidaLink.Application
 {
     public class FilterConfig
     {

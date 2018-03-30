@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace VidaLink
+namespace VidaLink.Application
 {
     public class BundleConfig
     {

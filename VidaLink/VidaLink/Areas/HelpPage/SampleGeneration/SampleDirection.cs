@@ -1,4 +1,4 @@
-namespace VidaLink.Areas.HelpPage
+namespace VidaLink.Application.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

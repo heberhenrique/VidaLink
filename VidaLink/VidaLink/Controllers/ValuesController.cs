@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace VidaLink.Controllers
+namespace VidaLink.Application.Controllers
 {
     public class ValuesController : ApiController
     {

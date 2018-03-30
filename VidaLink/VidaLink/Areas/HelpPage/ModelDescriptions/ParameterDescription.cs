@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace VidaLink.Areas.HelpPage.ModelDescriptions
+namespace VidaLink.Application.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterDescription
     {

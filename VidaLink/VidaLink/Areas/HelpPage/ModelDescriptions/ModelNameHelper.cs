@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace VidaLink.Areas.HelpPage.ModelDescriptions
+namespace VidaLink.Application.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

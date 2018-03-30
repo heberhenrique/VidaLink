@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace VidaLink.Areas.HelpPage
+namespace VidaLink.Application.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

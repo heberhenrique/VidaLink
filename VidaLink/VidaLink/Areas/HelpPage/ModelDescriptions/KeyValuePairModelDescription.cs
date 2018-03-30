@@ -1,4 +1,4 @@
-namespace VidaLink.Areas.HelpPage.ModelDescriptions
+namespace VidaLink.Application.Areas.HelpPage.ModelDescriptions
 {
     public class KeyValuePairModelDescription : ModelDescription
     {
