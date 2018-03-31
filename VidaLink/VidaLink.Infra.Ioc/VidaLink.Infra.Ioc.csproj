@@ -61,6 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VidaLink.Domain\VidaLink.Domain.csproj">
+      <Project>{77C168E1-9905-4C50-AAE6-AFEAC9DB73E6}</Project>
+      <Name>VidaLink.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VidaLink.Infra.Log\VidaLink.Infra.Log.csproj">
       <Project>{47041872-B7DA-44B4-B84E-E29FD0B68852}</Project>
       <Name>VidaLink.Infra.Log</Name>

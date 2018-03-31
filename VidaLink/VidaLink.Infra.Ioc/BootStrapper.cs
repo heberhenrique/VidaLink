@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VidaLink.Domain.Mappers;
 using VidaLink.Infra.Log.Interfaces;
 using VidaLink.Infra.Log.Services;
 
@@ -27,7 +28,7 @@ namespace VidaLink.Infra.Ioc
 
             #region Domain
 
-            //container.Register<IMapperConfig, MapperConfig>(Lifestyle.Singleton);
+            container.Register<IMapperConfig, MapperConfig>(Lifestyle.Singleton);
 
             #endregion
 
