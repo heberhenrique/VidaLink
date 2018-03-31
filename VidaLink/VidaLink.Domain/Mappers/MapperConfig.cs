@@ -5,6 +5,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using VidaLink.Domain.Models;
+using VidaLink.Domain.ViewModels;
 
 namespace VidaLink.Domain.Mappers
 {
@@ -18,7 +20,8 @@ namespace VidaLink.Domain.Mappers
             var config = new MapperConfiguration(cfg => {
                 #region Model && ViewModel
 
-                //cfg.CreateMap<Armarios, ArmariosViewModel>().ReverseMap();
+                cfg.CreateMap<Tarefas, TarefasViewModel>().ReverseMap();
+                cfg.CreateMap<Usuarios, UsuariosViewModel>().ReverseMap();
                 
 
                 #endregion
