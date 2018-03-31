@@ -5,6 +5,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VidaLink.DAL.Mapping;
 using VidaLink.Domain.Models;
 using VidaLink.Domain.Models.Base;
 
@@ -42,8 +43,8 @@ namespace VidaLink.DAL.Context
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-            //modelBuilder.Configurations.Add(new TarefasMap());
-            //modelBuilder.Configurations.Add(new UsuariosMap());
+            modelBuilder.Configurations.Add(new TarefasMap());
+            modelBuilder.Configurations.Add(new UsuariosMap());
             base.OnModelCreating(modelBuilder);
         }
 

@@ -15,5 +15,7 @@ namespace VidaLink.Domain.Models
         public string Descricao { get; set; }
         public DateTime? DataExecucao { get; set; }
         public StatusTarefasEnum Status { get; set; }
+
+        public virtual Usuarios Usuario { get; set; }
     }
 }
