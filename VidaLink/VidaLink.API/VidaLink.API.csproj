@@ -252,6 +252,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -378,9 +379,21 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VidaLink.BLL\VidaLink.BLL.csproj">
+      <Project>{0975E41E-CA32-447E-AF77-0E18E0254287}</Project>
+      <Name>VidaLink.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VidaLink.Domain\VidaLink.Domain.csproj">
+      <Project>{77C168E1-9905-4C50-AAE6-AFEAC9DB73E6}</Project>
+      <Name>VidaLink.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VidaLink.Infra.Ioc\VidaLink.Infra.Ioc.csproj">
       <Project>{2FFF67AE-A845-4111-8C79-818C20D347C6}</Project>
       <Name>VidaLink.Infra.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VidaLink.Infra.Log\VidaLink.Infra.Log.csproj">
+      <Project>{47041872-B7DA-44B4-B84E-E29FD0B68852}</Project>
+      <Name>VidaLink.Infra.Log</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
