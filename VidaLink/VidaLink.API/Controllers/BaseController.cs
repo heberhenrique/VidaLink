@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using VidaLink.BLL.Interfaces;
 using VidaLink.BLL.Interfaces.Base;
 using VidaLink.Domain.Models.Base;
 using VidaLink.Domain.ViewModels.Base;
@@ -17,18 +18,18 @@ namespace VidaLink.API.Controllers
     {
         public readonly IBaseLogger _logger;
         public readonly IBaseService<TModel, TViewModel> _defaultService;
-        //private readonly ISessoesService _sessoesService;
+        private readonly ISessoesService _sessoesService;
 
 
         public BaseController(
             IBaseLogger logger
             ,IBaseService<TModel, TViewModel> defaultService
-            //,ISessoesService sessoesService
+            ,ISessoesService sessoesService
             )
         {
             _logger = logger;
             _defaultService = defaultService;
-            //_sessoesService = sessoesService;
+            _sessoesService = sessoesService;
         }
 
         public virtual BaseListResponse<TViewModel> Get()
@@ -119,28 +120,28 @@ namespace VidaLink.API.Controllers
         protected bool ValidateToken()
         {
             var response = false;
-            //IEnumerable<string> values;
-            //try
-            //{
-            //    Request.Headers.TryGetValues("User-Token", out values);
-            //    var token = values.FirstOrDefault();
-            //    var sessao = _sessoesService.Read()
-            //                                .Where(t => t.Token == token)
-            //                                .FirstOrDefault();
+            IEnumerable<string> values;
+            try
+            {
+                Request.Headers.TryGetValues("User-Token", out values);
+                var token = values.FirstOrDefault();
+                var sessao = _sessoesService.Read()
+                                            .Where(t => t.Token == token)
+                                            .FirstOrDefault();
 
-            //    if (sessao.DataExpiracao.HasValue && sessao.DataExpiracao.Value > DateTime.Now.ToUniversalTime())
-            //    {
+                if (sessao.DataExpiracao.HasValue && sessao.DataExpiracao.Value > DateTime.Now.ToUniversalTime())
+                {
 
-            //        response = true;
-            //    }
+                    response = true;
+                }
 
-            //    _defaultService.SetUserLoggedIn(sessao.Usuario);
-            //}
-            //catch (Exception ex)
-            //{
-            //    _logger.Erro("Erro ao validar o token: ", ex);
-            //    throw ex;
-            //}
+                _defaultService.SetUserLoggedIn(sessao.Usuario);
+            }
+            catch (Exception ex)
+            {
+                _logger.Erro("Erro ao validar o token: ", ex);
+                throw ex;
+            }
 
             return response;
         }

@@ -58,15 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\VidaLinkContext.cs" />
+    <Compile Include="Mapping\SessoesMap.cs" />
     <Compile Include="Mapping\TarefasMap.cs" />
     <Compile Include="Mapping\UsuariosMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Architecture\IUnitOfWork.cs" />
     <Compile Include="Repository\Architecture\UnitOfWork.cs" />
     <Compile Include="Repository\Interfaces\Base\IRepositoryBase.cs" />
+    <Compile Include="Repository\Interfaces\ISessoesRepository.cs" />
     <Compile Include="Repository\Interfaces\ITarefasRepository.cs" />
     <Compile Include="Repository\Interfaces\IUsuariosRepository.cs" />
     <Compile Include="Repository\Repositories\Base\RepositoryBase.cs" />
+    <Compile Include="Repository\Repositories\SessoesRepository.cs" />
     <Compile Include="Repository\Repositories\TarefasRepository.cs" />
     <Compile Include="Repository\Repositories\UsuariosRepository.cs" />
   </ItemGroup>

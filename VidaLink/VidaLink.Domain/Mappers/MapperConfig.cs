@@ -20,6 +20,7 @@ namespace VidaLink.Domain.Mappers
             var config = new MapperConfiguration(cfg => {
                 #region Model && ViewModel
 
+                cfg.CreateMap<Sessoes, SessoesViewModel>().ReverseMap();
                 cfg.CreateMap<Tarefas, TarefasViewModel>().ReverseMap();
                 cfg.CreateMap<Usuarios, UsuariosViewModel>().ReverseMap();
                 

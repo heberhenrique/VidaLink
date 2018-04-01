@@ -19,6 +19,7 @@ namespace VidaLink.DAL.Context
 
         #region DbSets
 
+        public DbSet<Sessoes> Sessoes { get; set; }
         public DbSet<Tarefas> Tarefas { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
 
@@ -43,6 +44,7 @@ namespace VidaLink.DAL.Context
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
+            modelBuilder.Configurations.Add(new SessoesMap());
             modelBuilder.Configurations.Add(new TarefasMap());
             modelBuilder.Configurations.Add(new UsuariosMap());
             base.OnModelCreating(modelBuilder);

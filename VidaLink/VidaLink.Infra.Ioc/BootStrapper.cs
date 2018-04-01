@@ -41,6 +41,7 @@ namespace VidaLink.Infra.Ioc
 
             container.Register<IRepositoryBase<BaseModel>, RepositoryBase<BaseModel>>(Lifestyle.Scoped);
 
+            container.Register<ISessoesRepository, SessoesRepository>(Lifestyle.Scoped);
             container.Register<ITarefasRepository, TarefasRepository>(Lifestyle.Scoped);
             container.Register<IUsuariosRepository, UsuariosRepository>(Lifestyle.Scoped);
 
@@ -50,6 +51,7 @@ namespace VidaLink.Infra.Ioc
 
             container.Register<IBaseService<BaseModel, BaseViewModel>, BaseService<BaseModel, BaseViewModel>>(Lifestyle.Scoped);
 
+            container.Register<ISessoesService, SessoesService>(Lifestyle.Scoped);
             container.Register<ITarefasService, TarefasService>(Lifestyle.Scoped);
             container.Register<IUsuariosService, UsuariosService>(Lifestyle.Scoped);
 
