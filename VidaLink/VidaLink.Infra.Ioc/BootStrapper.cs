@@ -51,6 +51,7 @@ namespace VidaLink.Infra.Ioc
 
             container.Register<IBaseService<BaseModel, BaseViewModel>, BaseService<BaseModel, BaseViewModel>>(Lifestyle.Scoped);
 
+            container.Register<ILoginService, LoginService>(Lifestyle.Scoped);
             container.Register<ISessoesService, SessoesService>(Lifestyle.Scoped);
             container.Register<ITarefasService, TarefasService>(Lifestyle.Scoped);
             container.Register<IUsuariosService, UsuariosService>(Lifestyle.Scoped);

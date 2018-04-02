@@ -76,6 +76,8 @@
     <Compile Include="Util\ObjectExtensions.cs" />
     <Compile Include="ViewModels\Base\BaseResponse.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\LoginRequestViewModel.cs" />
+    <Compile Include="ViewModels\LoginResponseViewModel.cs" />
     <Compile Include="ViewModels\SessoesViewModel.cs" />
     <Compile Include="ViewModels\TarefasViewModel.cs" />
     <Compile Include="ViewModels\UsuariosViewModel.cs" />
