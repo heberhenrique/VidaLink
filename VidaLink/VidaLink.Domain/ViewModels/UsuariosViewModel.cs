@@ -29,11 +29,11 @@ namespace VidaLink.Domain.ViewModels
         public string ConfirmPassword { get; set; }
         public string PasswordHash { get; set; }
 
-        //public virtual ICollection<UsuariosPermissoesViewModel> Permissoes { get; set; }
+        public virtual ICollection<UsuariosPermissoesViewModel> Permissoes { get; set; }
 
         public UsuariosViewModel()
         {
-            //Permissoes = new List<UsuariosPermissoesViewModel>();
+            Permissoes = new List<UsuariosPermissoesViewModel>();
         }
     }
 }

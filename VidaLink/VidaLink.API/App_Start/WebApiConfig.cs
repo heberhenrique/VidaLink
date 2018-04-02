@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using Swagger.Net.Application;
 
 namespace VidaLink.API
 {
@@ -25,6 +26,14 @@ namespace VidaLink.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Redirect root to Swagger UI
+            config.Routes.MapHttpRoute(
+                name: "Swagger UI",
+                routeTemplate: "",
+                defaults: null,
+                constraints: null,
+                handler: new RedirectHandler(SwaggerDocsConfig.DefaultRootUrlResolver, "swagger/ui/index"));
         }
     }
 }

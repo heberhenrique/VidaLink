@@ -36,35 +36,35 @@ namespace VidaLink.BLL.Services
                 viewmodel.PasswordHash = PasswordHash.CreatePasswordHash(viewmodel.Password);
             }
 
-            //if (viewmodel.Permissoes != null && viewmodel.Permissoes.Count > 0)
-            //{
-            //    foreach (var permissao in viewmodel.Permissoes)
-            //    {
-            //        if (ValidarPermissaoUsuarioLogado(permissao))
-            //        {
-            //            viewmodel.Permissoes.FirstOrDefault().ID = Guid.NewGuid();
-            //        }
-            //        else
-            //        {
-            //            throw new Exception("Usuário sem permissão para cadastrar esse tipo de usuário");
-            //        }
-            //    }
+            if (viewmodel.Permissoes != null && viewmodel.Permissoes.Count > 0)
+            {
+                foreach (var permissao in viewmodel.Permissoes)
+                {
+                    if (ValidarPermissaoUsuarioLogado(permissao))
+                    {
+                        viewmodel.Permissoes.FirstOrDefault().ID = Guid.NewGuid();
+                    }
+                    else
+                    {
+                        throw new Exception("Usuário sem permissão para cadastrar esse tipo de usuário");
+                    }
+                }
 
-            //}
+            }
 
             response = base.Save(viewmodel);
 
             return response;
         }
 
-        //public bool ValidarPermissaoUsuarioLogado(UsuariosPermissoesViewModel permissao)
-        //{
-        //    if ((int)UsuarioLogado.Permissoes.FirstOrDefault().Nivel < (int)permissao.Nivel)
-        //    {
-        //        return false;
-        //    }
+        public bool ValidarPermissaoUsuarioLogado(UsuariosPermissoesViewModel permissao)
+        {
+            if ((int)UsuarioLogado.Permissoes.FirstOrDefault().Nivel < (int)permissao.Nivel)
+            {
+                return false;
+            }
 
-        //    return true;
-        //}
+            return true;
+        }
     }
 }

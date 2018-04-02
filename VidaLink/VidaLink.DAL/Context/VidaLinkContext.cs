@@ -22,6 +22,7 @@ namespace VidaLink.DAL.Context
         public DbSet<Sessoes> Sessoes { get; set; }
         public DbSet<Tarefas> Tarefas { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<UsuariosPermissoes> UsuariosPermissoes { get; set; }
 
         #endregion
 
@@ -47,6 +48,7 @@ namespace VidaLink.DAL.Context
             modelBuilder.Configurations.Add(new SessoesMap());
             modelBuilder.Configurations.Add(new TarefasMap());
             modelBuilder.Configurations.Add(new UsuariosMap());
+            modelBuilder.Configurations.Add(new UsuariosPermissoesMap());
             base.OnModelCreating(modelBuilder);
         }
 

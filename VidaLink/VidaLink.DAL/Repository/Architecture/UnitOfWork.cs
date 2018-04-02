@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VidaLink.DAL.Context;
 
 namespace VidaLink.DAL.Repository.Architecture
 {
     public sealed class UnitOfWork : IUnitOfWork
     {
-        //private MeuArmarioContext _context;
+        private VidaLinkContext _context;
         private Guid _usuarioID;
-        //private static UnitOfWork instance = new UnitOfWork(new MeuArmarioContext());
+        private static UnitOfWork instance = new UnitOfWork(new VidaLinkContext());
 
-        //public static IUnitOfWork Instance { get { return instance; } }
+        public static IUnitOfWork Instance { get { return instance; } }
 
-        //public UnitOfWork(MeuArmarioContext context)
-        //{
-        //    _context = context;
-        //}
+        public UnitOfWork(VidaLinkContext context)
+        {
+            _context = context;
+        }
 
         public void Commit()
         {
-            //_context.SaveChanges();
+            _context.SaveChanges();
         }
 
         public void Dispose()
@@ -33,11 +34,11 @@ namespace VidaLink.DAL.Repository.Architecture
         {
             if (disposing)
             {
-                //if (_context != null)
-                //{
-                //    _context.Dispose();
-                //    _context = null;
-                //}
+                if (_context != null)
+                {
+                    _context.Dispose();
+                    _context = null;
+                }
             }
         }
 

@@ -14,7 +14,7 @@ namespace VidaLink.Domain.Models
         public string PasswordHash { get; set; }
         public string UserName { get; set; }
 
-        //public virtual ICollection<UsuariosPermissoes> Permissoes { get; set; }
+        public virtual ICollection<UsuariosPermissoes> Permissoes { get; set; }
         public virtual ICollection<Tarefas> Tarefas { get; set; }
 
     }

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\StatusTarefasEnum.cs" />
+    <Compile Include="Enums\TipoUsuarioEnum.cs" />
     <Compile Include="Interfaces\Base\IBaseAspNetIdentity.cs" />
     <Compile Include="Interfaces\Base\IBaseModel.cs" />
     <Compile Include="Mappers\IMapperConfigcs.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Models\Sessoes.cs" />
     <Compile Include="Models\Tarefas.cs" />
     <Compile Include="Models\Usuarios.cs" />
+    <Compile Include="Models\UsuariosPermissoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ObjectExtensions.cs" />
     <Compile Include="ViewModels\Base\BaseResponse.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="ViewModels\LoginResponseViewModel.cs" />
     <Compile Include="ViewModels\SessoesViewModel.cs" />
     <Compile Include="ViewModels\TarefasViewModel.cs" />
+    <Compile Include="ViewModels\UsuariosPermissoesViewModel.cs" />
     <Compile Include="ViewModels\UsuariosViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

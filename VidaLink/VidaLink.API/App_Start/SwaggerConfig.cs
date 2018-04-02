@@ -113,7 +113,7 @@ namespace VidaLink.API
                         // more Xml comment files.
                         //
                         //c.IncludeXmlComments(AppDomain.CurrentDomain.BaseDirectory + "file.ext");
-                        c.IncludeAllXmlComments(thisAssembly, AppDomain.CurrentDomain.BaseDirectory);
+                        //c.IncludeAllXmlComments(thisAssembly, AppDomain.CurrentDomain.BaseDirectory);
 
                         // Swagger-Net makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
