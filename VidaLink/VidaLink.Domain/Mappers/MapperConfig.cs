@@ -22,6 +22,7 @@ namespace VidaLink.Domain.Mappers
 
                 cfg.CreateMap<Sessoes, SessoesViewModel>().ReverseMap();
                 cfg.CreateMap<Tarefas, TarefasViewModel>().ReverseMap();
+                cfg.CreateMap<UsuariosPermissoes, UsuariosPermissoesViewModel>().ReverseMap();
                 cfg.CreateMap<Usuarios, UsuariosViewModel>().ReverseMap();
                 
 

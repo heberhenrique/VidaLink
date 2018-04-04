@@ -43,6 +43,7 @@ namespace VidaLink.Infra.Ioc
 
             container.Register<ISessoesRepository, SessoesRepository>(Lifestyle.Scoped);
             container.Register<ITarefasRepository, TarefasRepository>(Lifestyle.Scoped);
+            container.Register<IUsuariosPermissoesRepository, UsuariosPermissoesRepository>(Lifestyle.Scoped);
             container.Register<IUsuariosRepository, UsuariosRepository>(Lifestyle.Scoped);
 
             #endregion
@@ -54,7 +55,9 @@ namespace VidaLink.Infra.Ioc
             container.Register<ILoginService, LoginService>(Lifestyle.Scoped);
             container.Register<ISessoesService, SessoesService>(Lifestyle.Scoped);
             container.Register<ITarefasService, TarefasService>(Lifestyle.Scoped);
+            container.Register<IUsuariosPermissoesService, UsuariosPermissoesService>(Lifestyle.Scoped);
             container.Register<IUsuariosService, UsuariosService>(Lifestyle.Scoped);
+            
 
             #endregion
 
